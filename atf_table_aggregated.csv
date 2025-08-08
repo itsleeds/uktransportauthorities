@@ -1,76 +1,76 @@
 name,atf24_25,atf23_24,atf22_23,atf21_22,atf20_21,atfe20_21,name_atf
-Bedford,110977,0,263130,0,363750,30250,Bedford
-Blackburn with Darwen,185106,0,157270,0,292600,77000,Blackburn with Darwen
-Blackpool,84208,0,0,0,312000,26000,Blackpool
-"Bournemouth, Christchurch and Poole",478063,0,3780000,208947,1062100,312835,"Bournemouth, Christchurch and Poole"
-Bracknell Forest,74781,75000,30000,0,181800,57000,Bracknell Forest
-Brighton and Hove,330173,0,3000000,1416947,2376000,663657,Brighton and Hove
-Buckinghamshire,663439,1429356,477199,45000,1748000,513943,Buckinghamshire
-Cambridgeshire and Peterborough Combined Authority,1607209,1100000,3896590,635000,1724250,642429,Cambridgeshire and Peterborough Combined Authority
-Central Bedfordshire,176561,120778,252605,0,600000,223454,Central Bedfordshire
-Cheshire East,239282,673786,1297882,78947,588050,155000,Cheshire East
-Cheshire West and Chester,427390,343500,274100,882994,611800,161000,Cheshire West and Chester
-Cornwall,341728,0,500000,1237394,607000,152000,Cornwall
-Cumberland,327163,674926,0,0,0,0,Cumberland
-Cumbria,0,0,1602359,4876700,886350,260323,Cumbria
-Devon,973119,1100000,1825000,1635000,1283450,338000,Devon
-Dorset,227790,0,1978000,303947,438900,128486,Dorset
-East Midlands Combined Authority,3459968,2065088,7789049,11401894,10266350,2435727,"East Midlands Combined Authority, East Midlands Combined Authority, East Midlands Combined Authority, East Midlands Combined Authority, East Midlands Combined Authority, East Midlands Combined Authority, East Midlands Combined Authority, East Midlands Combined Authority, East Midlands Combined Authority, East Midlands Combined Authority, East Midlands Combined Authority"
-East Riding of Yorkshire,409998,806461,855200,0,467400,123000,East Riding of Yorkshire
-East Sussex,326741,0,1223826,0,1820200,535171,East Sussex
-Essex,1799829,0,5270000,1316697,7358700,968500,Essex
-Gloucestershire,772611,0,5365000,17006360,864750,321773,Gloucestershire
-Greater London,0,0,0,0,20000000,5000000,Greater London
-Greater Manchester Combined Authority,5140861,3826673,23719500,14624172,15871250,3174000,Greater Manchester Combined Authority
-Hampshire,1680171,2614000,2477515,761447,3280350,863000,Hampshire
-Herefordshire,112050,0,306000,0,120000,20000,Herefordshire
-Hertfordshire,1434539,0,4620803,2709479,6451450,1247329,Hertfordshire
-Isle of Wight,84169,0,700000,79200,235600,62000,Isle of Wight
+Bedford,110977,0,263130,0,363750,30250,Bedford Unitary Authority
+Blackburn with Darwen,185106,0,157270,0,292600,77000,Blackburn with Darwen Unitary Authority
+Blackpool,84208,0,0,0,312000,26000,Blackpool Unitary Authority
+"Bournemouth, Christchurch and Poole",478063,0,3780000,208947,1062100,312835,"Bournemouth, Christchurch & Poole Unitary Authority*"
+Bracknell Forest,74781,75000,30000,0,181800,57000,Bracknell Forest Unitary Authority
+Brighton and Hove,330173,0,3000000,1416947,2376000,663657,Brighton & Hove Unitary Authority[footnote 1]
+Buckinghamshire,663439,1429356,477199,45000,1748000,513943,Buckinghamshire Unitary Authority
+Cambridgeshire and Peterborough Combined Authority,1607209,1100000,3896590,635000,1724250,642429,Cambridgeshire & Peterborough Combined Authority
+Central Bedfordshire,176561,120778,252605,0,600000,223454,Central Bedfordshire Unitary Authority
+Cheshire East,239282,673786,1297882,78947,588050,155000,Cheshire East Unitary Authority[footnote 1]
+Cheshire West and Chester,427390,343500,274100,882994,611800,161000,Cheshire West & Chester Unitary Authority
+Cornwall,341728,0,500000,1237394,607000,152000,Cornwall Unitary Authority[footnote 2]
+Cumberland,327163,674926,0,0,0,0,Cumberland Council
+Cumbria,0,0,1602359,4876700,886350,260323,Cumbria County Council
+Devon,973119,1100000,1825000,1635000,1283450,338000,Devon County Council
+Dorset,227790,0,1978000,303947,438900,128486,Dorset Unitary Authority[footnote 1]
+East Midlands Combined Authority,3459968,2065088,7789049,11401894,10266350,2435727,"Derby Unitary Authority, Derbyshire County Council, East Midlands Combined County Authority, Leicester Unitary Authority[footnote 1], Leicestershire County Authority, Lincolnshire County Council, North East Lincolnshire Unitary Authority, North Lincolnshire Council, Nottingham Unitary Authority, Nottinghamshire County Council[footnote 1], Rutland Unitary Authority"
+East Riding of Yorkshire,409998,806461,855200,0,467400,123000,East Riding of Yorkshire Unitary Authority
+East Sussex,326741,0,1223826,0,1820200,535171,East Sussex County Council
+Essex,1799829,0,5270000,1316697,7358700,968500,Essex County Council
+Gloucestershire,772611,0,5365000,17006360,864750,321773,Gloucestershire County Council[footnote 1]
+Greater London,0,0,0,0,20000000,5000000,London Boroughs and Transport for London
+Greater Manchester Combined Authority,5140861,3826673,23719500,14624172,15871250,3174000,Greater Manchester Combined Authority*
+Hampshire,1680171,2614000,2477515,761447,3280350,863000,Hampshire County Council[footnote 1]
+Herefordshire,112050,0,306000,0,120000,20000,Herefordshire Unitary Authority
+Hertfordshire,1434539,0,4620803,2709479,6451450,1247329,Hertfordshire County Council
+Isle of Wight,84169,0,700000,79200,235600,62000,Isle of Wight Unitary Authority
 Isles of Scilly,0,0,11000,0,0,0,Isles of Scilly
-Kent,1886065,1200000,1569000,1300000,6098050,1600000,Kent
-Kingston upon Hull,159189,69500,362000,10653947,1035500,272000,Kingston upon Hull
-Lancashire,1476854,0,5529992,0,2801000,782087,Lancashire
-Liverpool City Region Combined Authority,1854047,0,14400000,13564397,7896000,1974000,Liverpool City Region Combined Authority
-Luton,134315,186042,0,0,822700,216000,Luton
-Medway,167173,0,486418,0,927000,242500,Medway
-Milton Keynes,172176,0,1182516,0,684750,228000,Milton Keynes
-Norfolk,1097297,1045000,2240000,1694000,1498150,295500,Norfolk
-North East Joint Transport Committee,2352145,5095298,7203211,28208191,0,2262000,North East Joint Transport Committee
-North Northamptonshire,215297,0,0,0,0,0,North Northamptonshire
-North Somerset,129878,0,417640,310000,473750,106140,North Somerset
-North Yorkshire,369709,0,0,0,1011750,133000,North Yorkshire
+Kent,1886065,1200000,1569000,1300000,6098050,1600000,Kent County Council
+Kingston upon Hull,159189,69500,362000,10653947,1035500,272000,Kingston upon Hull Unitary Authority*
+Lancashire,1476854,0,5529992,0,2801000,782087,Lancashire County Council
+Liverpool City Region Combined Authority,1854047,0,14400000,13564397,7896000,1974000,Liverpool City Region Combined Authority*
+Luton,134315,186042,0,0,822700,216000,Luton Unitary Authority
+Medway,167173,0,486418,0,927000,242500,Medway Unitary Authority
+Milton Keynes,172176,0,1182516,0,684750,228000,Milton Keynes Unitary Authority
+Norfolk,1097297,1045000,2240000,1694000,1498150,295500,Norfolk County Council
+North East Joint Transport Committee,2352145,5095298,7203211,28208191,0,2262000,North East Combined Authority[footnote 1]
+North Northamptonshire,215297,0,0,0,0,0,North Northamptonshire Council
+North Somerset,129878,0,417640,310000,473750,106140,North Somerset Unitary Authority
+North Yorkshire,369709,0,0,0,1011750,133000,North Yorkshire County Council
 Northamptonshire,0,0,0,0,1332850,351000,Northamptonshire
-Oxfordshire,868081,2384163,0,10648384,2985000,298500,Oxfordshire
-Plymouth,316304,0,2480000,0,945250,249000,Plymouth
-Portsmouth,123562,0,653580,0,461400,214515,Portsmouth
-Reading,206909,558000,75000,2300000,1179000,221250,Reading
-Shropshire,193991,0,612800,78947,259500,86000,Shropshire
-Slough,94564,0,413000,10199500,552000,205577,Slough
-Somerset,684781,0,1583322,1023000,457900,120000,Somerset
-South Yorkshire Combined Authority,1641917,3358273,2430943,2669947,5461550,1437000,South Yorkshire Combined Authority
-Southampton,295429,67200,814464,976250,1225000,245000,Southampton
-Southend-on-Sea,107894,0,0,0,927000,309000,Southend-on-Sea
-Staffordshire,524445,900000,669087,343000,1832500,183000,Staffordshire
-Stoke-on-Trent,154155,0,509320,0,504750,126000,Stoke-on-Trent
-Suffolk,912105,0,7933216,3918947,1685000,376519,Suffolk
-Surrey,1440508,3300000,997843,6913646,6445750,848000,Surrey
-Swindon,139624,0,381500,0,731500,214515,Swindon
+Oxfordshire,868081,2384163,0,10648384,2985000,298500,Oxfordshire County Council[footnote 1]
+Plymouth,316304,0,2480000,0,945250,249000,Plymouth Unitary Authority
+Portsmouth,123562,0,653580,0,461400,214515,Portsmouth Unitary Authority
+Reading,206909,558000,75000,2300000,1179000,221250,Reading Unitary Authority
+Shropshire,193991,0,612800,78947,259500,86000,Shropshire Unitary Authority[footnote 1]
+Slough,94564,0,413000,10199500,552000,205577,Slough Unitary Authority
+Somerset,684781,0,1583322,1023000,457900,120000,Somerset County Council
+South Yorkshire Combined Authority,1641917,3358273,2430943,2669947,5461550,1437000,South Yorkshire Combined Authority[footnote 1]
+Southampton,295429,67200,814464,976250,1225000,245000,Southampton Unitary Authority
+Southend-on-Sea,107894,0,0,0,927000,309000,Southend Unitary Council
+Staffordshire,524445,900000,669087,343000,1832500,183000,Staffordshire County Council
+Stoke-on-Trent,154155,0,509320,0,504750,126000,Stoke-on-Trent Unitary Authority
+Suffolk,912105,0,7933216,3918947,1685000,376519,Suffolk County Council[footnote 1]
+Surrey,1440508,3300000,997843,6913646,6445750,848000,Surrey County Council
+Swindon,139624,0,381500,0,731500,214515,Swindon Unitary Authority
 Tees Valley Combined Authority,810303,1301398,441269,4232075,1722000,481542,Tees Valley Combined Authority
-Telford and Wrekin,222050,0,1895772,0,229500,76000,Telford and Wrekin
-Thurrock,105087,0,305000,616000,690000,288000,Thurrock
-Torbay,83307,0,237366,0,132600,41250,Torbay
+Telford and Wrekin,222050,0,1895772,0,229500,76000,Telford and Wrekin Unitary Authority
+Thurrock,105087,0,305000,616000,690000,288000,Thurrock Unitary Authority
+Torbay,83307,0,237366,0,132600,41250,Torbay Unitary Authority
 Total,54200000,45794803,170563633,200856527,175360750,42102451,Total
-Warrington,252381,0,727950,1109500,650000,130000,Warrington
-Warwickshire,715887,0,4761000,1478947,979450,129000,Warwickshire
-West Berkshire,96701,0,275000,280000,495000,124000,West Berkshire
-West Midlands ITA,5226431,6141969,12608201,17250000,13097650,3850997,West Midlands ITA
-West Northamptonshire,254775,0,673314,0,0,0,West Northamptonshire
-West Sussex,528746,1014000,0,0,2351250,781000,West Sussex
-West Yorkshire Combined Authority,4211759,3082319,17430668,12700197,10053000,2513000,West Yorkshire Combined Authority
-West of England Combined Authority,1140199,169174,3641803,5867527,2964000,827895,West of England Combined Authority
-Westmorland and Furness,271234,244000,0,0,0,0,Westmorland and Furness
-Wiltshire,306720,100000,978000,0,681000,227000,Wiltshire
-Windsor and Maidenhead,91955,0,262100,0,335400,140000,Windsor and Maidenhead
-Wokingham,212882,0,606215,2950000,576650,76000,Wokingham
-Worcestershire,361405,748899,0,0,649200,135500,Worcestershire
-York,120482,0,1103095,350000,658350,193287,York
+Warrington,252381,0,727950,1109500,650000,130000,Warrington Unitary Authority
+Warwickshire,715887,0,4761000,1478947,979450,129000,Warwickshire County Council[footnote 1]
+West Berkshire,96701,0,275000,280000,495000,124000,West Berkshire Unitary Authority
+West Midlands ITA,5226431,6141969,12608201,17250000,13097650,3850997,West Midlands Combined Authority
+West Northamptonshire,254775,0,673314,0,0,0,West Northamptonshire Unitary Authority
+West Sussex,528746,1014000,0,0,2351250,781000,West Sussex County Authority
+West Yorkshire Combined Authority,4211759,3082319,17430668,12700197,10053000,2513000,West Yorkshire Combined Authority[footnote 1]
+West of England Combined Authority,1140199,169174,3641803,5867527,2964000,827895,West of England Combined Authority[footnote 1]
+Westmorland and Furness,271234,244000,0,0,0,0,Westmorland and Furness Council
+Wiltshire,306720,100000,978000,0,681000,227000,Wiltshire Unitary Authority
+Windsor and Maidenhead,91955,0,262100,0,335400,140000,Royal Borough of Windsor and Maidenhead Unitary Authority
+Wokingham,212882,0,606215,2950000,576650,76000,Wokingham Unitary Authority
+Worcestershire,361405,748899,0,0,649200,135500,Worcestershire County Authority
+York,120482,0,1103095,350000,658350,193287,City of York Unitary Authority
