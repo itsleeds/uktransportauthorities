@@ -253,7 +253,7 @@ atf_table = atf_table |>
     name == "Cheshire West & Chester" ~ "Cheshire West and Chester",
     name == "City of York" ~ "York",
     name == "Cumberland Council" ~ "Cumberland",
-    name == "East Midlands Combined" ~ "East Midlands ITA",
+    name == "East Midlands Combined" ~ "East Midlands Combined Authority",
     name == "Greater Manchester Combined Authority*" ~ "Greater Manchester Combined Authority",
     name == "Kingston upon Hull*" ~ "Kingston upon Hull",
     name == "Liverpool City Region Combined Authority*" ~ "Liverpool City Region Combined Authority",
@@ -269,11 +269,38 @@ atf_table = atf_table |>
     TRUE ~ name
   ))
 atf_table$name
+atf_table_aggregated = atf_table |>
+  # rename las in east midlands
+  mutate(name = case_when(
+    str_detect(name, "Derb|Leic|Lincoln|Nottingham|Rutland") ~ "East Midlands Combined Authority",
+    TRUE ~ name
+  )) |>
+  group_by(name) |>
+  summarise(across(starts_with("atf"), \(x) sum(x, na.rm = TRUE)))
 # check match again:
-matching_names = atf_table$name %in% transport_authorities$name
-atf_table_not_matched = atf_table |>
+matching_names = atf_table_aggregated$name %in% transport_authorities$name
+atf_table_not_matched = atf_table_aggregated |>
   filter(!matching_names)
 atf_table_not_matched$name
 ```
 
+Now we'll join the funding data to the boundaries:
+
+```{r}
+#| label: join_boundaries
+atf_joined = transport_authorities |>
+  left_join(atf_table_aggregated, by = c("name" = "name"))
+ggplot() +
+  geom_sf(data = atf_joined, aes(fill = atf2024_25)) +
+  scale_fill_viridis_c() +
+  theme_minimal() +
+  labs(title = "Active Travel Fund Allocations (2024/25)", fill = "ATF 2024/25 (£)")
+# Save the joined data
+sf::write_sf(atf_joined, "atf_joined_2025.geojson", delete_dsn = TRUE)
+```
+
 Next steps...
+
+- Explore funding per person
+- Explore funding per km of cycle lane
+- Explore funding in relation to tools used and LCWIPs
