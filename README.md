@@ -144,25 +144,25 @@ names(table_raw)
 # [5] "Active Travel Fund 3 (2021/22), including change control (£)"
 # [6] "Active Travel Fund 2 (2020/21) (£)"                          
 # [7] "Emergency Active Travel Fund (2020/21) (£)" 
-names_clean = c("name_atf", "atf2024_25", "atf23_24", "atf22_23", "atf21_22", "atf20_21", "atfe20_21")
+names_clean = c("name_atf", "atf24_25", "atf23_24", "atf22_23", "atf21_22", "atf20_21", "atfe20_21")
 atf_table = table_raw |>
   setNames(names_clean)
 head(atf_table)
 ```
 
     # A tibble: 6 × 7
-      name_atf              atf2024_25 atf23_24 atf22_23 atf21_22 atf20_21 atfe20_21
-      <chr>                 <chr>      <chr>    <chr>    <chr>    <chr>    <chr>    
-    1 Bedford Unitary Auth… 110,977    Not app… 263,130  n/a      363,750  30,250   
-    2 Blackburn with Darwe… 185,106    n/a      157,270  n/a      292,600  77,000   
-    3 Blackpool Unitary Au… 84,208     n/a      n/a      n/a      312,000  26,000   
-    4 Bournemouth, Christc… 478,063    n/a      3,780,0… 208,947  1,062,1… 312,835  
-    5 Bracknell Forest Uni… 74,781     75,000   30,000   n/a      181,800  57,000   
-    6 Brighton & Hove Unit… 330,173    n/a      3,000,0… 1,416,9… 2,376,0… 663,657  
+      name_atf                atf24_25 atf23_24 atf22_23 atf21_22 atf20_21 atfe20_21
+      <chr>                   <chr>    <chr>    <chr>    <chr>    <chr>    <chr>    
+    1 Bedford Unitary Author… 110,977  Not app… 263,130  n/a      363,750  30,250   
+    2 Blackburn with Darwen … 185,106  n/a      157,270  n/a      292,600  77,000   
+    3 Blackpool Unitary Auth… 84,208   n/a      n/a      n/a      312,000  26,000   
+    4 Bournemouth, Christchu… 478,063  n/a      3,780,0… 208,947  1,062,1… 312,835  
+    5 Bracknell Forest Unita… 74,781   75,000   30,000   n/a      181,800  57,000   
+    6 Brighton & Hove Unitar… 330,173  n/a      3,000,0… 1,416,9… 2,376,0… 663,657  
 
 ``` r
 # # A tibble: 6 × 7
-#   name_atf                   atf2024_25 atf23_24 atf22_23 atf21_22 atf20_21 atf20_21
+#   name_atf                   atf24_25 atf23_24 atf22_23 atf21_22 atf20_21 atf20_21
 #   <chr>                  <chr>      <chr>    <chr>    <chr>    <chr>    <chr>   
 # 1 Bedford Unitary Autho… 110,977    Not app… 263,130  n/a      363,750  30,250  
 # 2 Blackburn with Darwen… 185,106    n/a      157,270  n/a      292,600  77,000  
@@ -530,7 +530,7 @@ Now we’ll join the funding data to the boundaries:
 atf_joined = transport_authorities |>
   left_join(atf_table_aggregated, by = c("name" = "name"))
 ggplot() +
-  geom_sf(data = atf_joined, aes(fill = atf2024_25)) +
+  geom_sf(data = atf_joined, aes(fill = atf24_25)) +
   scale_fill_viridis_c() +
   theme_minimal() +
   labs(title = "Active Travel Fund Allocations (2024/25)", fill = "ATF 2024/25 (£)")
@@ -542,6 +542,79 @@ ggplot() +
 # Save the joined data
 sf::write_sf(atf_joined, "atf_joined_2025.geojson", delete_dsn = TRUE)
 ```
+
+Now let’s present the data as an animated map:
+
+``` r
+library(tmap)
+qtm(atf_joined, fill = "atf24_25")
+```
+
+![](README_files/figure-commonmark/animated_map-1.png)
+
+``` r
+atf_joined |>
+  qtm(, fill = c("atf24_25", "atf23_24", "atf22_23", "atf21_22", "atf20_21", "atfe20_21")) +
+  # Legend outside
+  tm_facets(free.scales = FALSE) +
+  tm_legend(show = FALSE)
+```
+
+![](README_files/figure-commonmark/animated_map-2.png)
+
+``` r
+# With ggplot2, first pivot_longer the data
+atf_long = atf_joined |>
+  pivot_longer(cols = starts_with("atf"), names_to = "year", values_to = "funding") |>
+  # Combined atfe and atf20_21
+  mutate(year = case_when(
+    year == "atfe20_21" ~ "atf20_21",
+    TRUE ~ year
+    )) |>
+  group_by(name, year) |>
+  summarise(funding = sum(funding, na.rm = TRUE)) |>
+  ungroup() 
+g_facet = ggplot(atf_long) + 
+    geom_sf(aes(fill = funding)) +
+    scale_fill_viridis_c() +
+    facet_wrap(~ year, ncol = 3) +
+    theme_minimal() +
+    labs(title = "Active Travel Fund Allocations by Year", fill = "Funding (£)") +
+    theme(legend.position = "bottom") +
+    theme_void() 
+g_facet
+```
+
+![](README_files/figure-commonmark/animated_map-3.png)
+
+``` r
+library(gganimate)
+gga = ggplot(atf_long) + 
+    geom_sf(aes(fill = funding)) +
+    scale_fill_viridis_c() +
+    # No facet_wrap here, just overlap for animation
+    theme_minimal() +
+    labs(title = "Active Travel Fund Allocations by Year", fill = "Funding (£)") +
+    theme(legend.position = "bottom") +
+    theme_void() +
+  transition_states(year, transition_length = 2, state_length = 1) +
+  labs(title = "Active Travel Fund Allocations: {closest_state}", fill = "Funding (£)") +
+  ease_aes('linear') +
+  theme(legend.position = "bottom") +
+  theme_void()
+class(gga)
+```
+
+    [1] "gganim" "gg"     "ggplot"
+
+``` r
+# install.packages("gifski")
+# All pngs in directory, now animate them
+# library(gifski)
+# animate(gga, nframes = 5, fps = 1, width = 800, height = 600, renderer = gifski_renderer("atf_allocations.gif"))
+```
+
+![](atf_allocations.gif)
 
 Next steps…
 
