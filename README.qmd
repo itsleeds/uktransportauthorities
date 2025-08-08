@@ -276,12 +276,14 @@ atf_table_aggregated = atf_table |>
     TRUE ~ name
   )) |>
   group_by(name) |>
-  summarise(across(starts_with("atf"), \(x) sum(x, na.rm = TRUE)))
+  summarise(across(starts_with("atf"), \(x) sum(x, na.rm = TRUE)), name_atf = paste(name, collapse = ", ")) 
 # check match again:
 matching_names = atf_table_aggregated$name %in% transport_authorities$name
 atf_table_not_matched = atf_table_aggregated |>
   filter(!matching_names)
 atf_table_not_matched$name
+# Save the output as a csv file:
+write_csv(atf_table_aggregated, "atf_table_aggregated.csv")
 ```
 
 Now we'll join the funding data to the boundaries:
